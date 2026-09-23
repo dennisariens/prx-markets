@@ -33,6 +33,10 @@ npm run dev
 
 Then open `http://localhost:3000`.
 
+## Static launch page
+
+`static-landing/index.html` is a self-contained public holding page for direct upload to standard web hosting. It has no build step, external assets or runtime dependencies.
+
 ## Status
 
 Prototype data, prices, projects, verification standards and registry records are illustrative. They must not be represented as live or verified supply until real project/operator integrations and methodology review are established.
