@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#071011">
   <title>PRX Markets — Fund what gets fixed.</title>
   <meta name="description" content="PRX is building transparent market infrastructure for measurable environmental recovery.">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23071011'/%3E%3Cpath d='M17 14 47 50M47 14 17 50' stroke='%23F4F5F1' stroke-width='9'/%3E%3Cpath d='M47 14 17 50' stroke='%2300E5D6' stroke-width='5'/%3E%3C/svg%3E">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23071011'/%3E%3Cpath d='M16 15 48 49M48 15 16 49' stroke='%23F7F7F5' stroke-width='10'/%3E%3Cpath d='M13 52 51 12' stroke='%2300E5D6' stroke-width='8'/%3E%3C/svg%3E">
   <style>
     :root {
       --ink: #071011;
@@ -28,12 +28,11 @@
 
     .shell { width: min(1440px, 100%); margin: 0 auto; overflow: hidden; border-inline: 1px solid var(--line); }
     .topbar { min-height: 82px; padding: 0 clamp(24px, 4vw, 64px); display: flex; align-items: center; gap: 42px; border-bottom: 1px solid var(--line); position: relative; z-index: 5; }
-    .brand { display: flex; align-items: center; position: relative; min-width: 158px; height: 48px; }
-    .logo-pr { font-size: 2rem; font-weight: 800; letter-spacing: -.08em; line-height: 1; }
-    .logo-x { position: relative; width: 27px; height: 30px; margin-left: 2px; }
-    .logo-x i, .logo-x b { position: absolute; width: 7px; height: 35px; left: 10px; top: -2px; transform: rotate(42deg); background: var(--paper); }
-    .logo-x b { transform: rotate(-42deg); background: var(--cyan); z-index: 2; }
-    .brand small { position: absolute; left: 1px; bottom: 0; font: 500 .44rem/1 var(--display); letter-spacing: .34em; color: var(--muted); }
+    .brand { display: flex; align-items: center; width: 150px; height: 58px; color: var(--paper); }
+    .brand-logo { display: block; width: 150px; height: auto; overflow: visible; }
+    .brand-logo .letters { fill: currentColor; font-family: Arial Black, Arial, Helvetica, sans-serif; font-size: 66px; font-weight: 900; letter-spacing: -6px; }
+    .brand-logo .markets { fill: currentColor; font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 2px; }
+    .brand-logo .recovery-slash { stroke: var(--cyan); stroke-width: 12; stroke-linecap: butt; }
     .nav { display: flex; align-items: center; gap: 30px; margin-left: auto; color: #c5ccca; font-size: .82rem; }
     .nav a { transition: color .2s ease; }
     .nav a:hover, .nav a:focus-visible { color: var(--cyan); }
@@ -59,9 +58,9 @@
     .orbit::before, .orbit::after { content: ""; position: absolute; border: 1px solid var(--line); border-radius: 50%; }
     .orbit::before { inset: 14%; }
     .orbit::after { inset: 32%; background: rgba(0,229,214,.04); box-shadow: inset 0 0 45px rgba(0,229,214,.1); }
-    .x-core { position: absolute; left: 50%; top: 47%; width: 94px; height: 112px; transform: translate(-50%, -50%); z-index: 2; }
-    .x-core::before, .x-core::after { content: ""; position: absolute; left: 42px; width: 10px; height: 112px; background: var(--paper); transform: rotate(40deg); }
-    .x-core::after { background: var(--cyan); transform: rotate(-40deg); }
+    .x-core { position: absolute; left: 50%; top: 47%; width: 116px; height: 116px; transform: translate(-50%, -50%); z-index: 2; }
+    .x-core::before { content: "X"; position: absolute; inset: 0; display: grid; place-items: center; color: var(--paper); font: 900 7rem/1 Arial Black, Arial, Helvetica, sans-serif; letter-spacing: -.13em; }
+    .x-core::after { content: ""; position: absolute; width: 142px; height: 14px; left: -14px; top: 51px; background: var(--cyan); transform: rotate(-47deg); }
     .node { position: absolute; display: flex; align-items: center; gap: 9px; font: 600 .62rem var(--mono); letter-spacing: .13em; color: #98a5a3; }
     .node::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--cyan); box-shadow: 0 0 12px var(--cyan); }
     .n1 { left: 13%; top: 24%; } .n2 { right: 11%; top: 35%; } .n3 { left: 17%; bottom: 20%; } .n4 { right: 13%; bottom: 16%; }
@@ -168,7 +167,11 @@
   <div class="shell">
     <header class="topbar">
       <a class="brand" href="#top" aria-label="PRX Markets home">
-        <span class="logo-pr">PR</span><span class="logo-x" aria-hidden="true"><i></i><b></b></span><small>MARKETS</small>
+        <svg class="brand-logo" viewBox="0 0 178 92" role="img" aria-label="PRX Markets">
+          <text class="letters" x="0" y="61">PRX</text>
+          <line class="recovery-slash" x1="112" y1="66" x2="162" y2="7"></line>
+          <text class="markets" x="2" y="88" textLength="171" lengthAdjust="spacing">MARKETS</text>
+        </svg>
       </a>
       <nav class="nav" aria-label="Primary navigation">
         <a href="#premise">Why PRX</a>
@@ -251,7 +254,13 @@
     </main>
 
     <footer class="site-footer">
-      <a class="brand" href="#top" aria-label="Back to top"><span class="logo-pr">PR</span><span class="logo-x" aria-hidden="true"><i></i><b></b></span><small>MARKETS</small></a>
+      <a class="brand" href="#top" aria-label="Back to top">
+        <svg class="brand-logo" viewBox="0 0 178 92" role="img" aria-label="PRX Markets">
+          <text class="letters" x="0" y="61">PRX</text>
+          <line class="recovery-slash" x1="112" y1="66" x2="162" y2="7"></line>
+          <text class="markets" x="2" y="88" textLength="171" lengthAdjust="spacing">MARKETS</text>
+        </svg>
+      </a>
       <p>Markets for measurable recovery.</p>
       <p>© 2026 PRX MARKETS · AMSTERDAM</p>
     </footer>
