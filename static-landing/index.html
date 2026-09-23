@@ -28,10 +28,12 @@
 
     .shell { width: min(1440px, 100%); margin: 0 auto; overflow: hidden; border-inline: 1px solid var(--line); }
     .topbar { min-height: 82px; padding: 0 clamp(24px, 4vw, 64px); display: flex; align-items: center; gap: 42px; border-bottom: 1px solid var(--line); position: relative; z-index: 5; }
-    .brand { display: flex; align-items: center; gap: 11px; min-width: 158px; }
-    .wordmark { font-size: 1.7rem; font-weight: 900; letter-spacing: -.09em; }
-    .wordmark i { color: var(--cyan); font-style: normal; }
-    .brand small { max-width: 46px; font: 600 .62rem/1.1 var(--mono); letter-spacing: .12em; color: var(--muted); }
+    .brand { display: flex; align-items: center; position: relative; min-width: 158px; height: 48px; }
+    .logo-pr { font-size: 2rem; font-weight: 800; letter-spacing: -.08em; line-height: 1; }
+    .logo-x { position: relative; width: 27px; height: 30px; margin-left: 2px; }
+    .logo-x i, .logo-x b { position: absolute; width: 7px; height: 35px; left: 10px; top: -2px; transform: rotate(42deg); background: var(--paper); }
+    .logo-x b { transform: rotate(-42deg); background: var(--cyan); z-index: 2; }
+    .brand small { position: absolute; left: 1px; bottom: 0; font: 500 .44rem/1 var(--display); letter-spacing: .34em; color: var(--muted); }
     .nav { display: flex; align-items: center; gap: 30px; margin-left: auto; color: #c5ccca; font-size: .82rem; }
     .nav a { transition: color .2s ease; }
     .nav a:hover, .nav a:focus-visible { color: var(--cyan); }
@@ -166,8 +168,7 @@
   <div class="shell">
     <header class="topbar">
       <a class="brand" href="#top" aria-label="PRX Markets home">
-        <span class="wordmark">PR<i>X</i></span>
-        <small>MARKETS</small>
+        <span class="logo-pr">PR</span><span class="logo-x" aria-hidden="true"><i></i><b></b></span><small>MARKETS</small>
       </a>
       <nav class="nav" aria-label="Primary navigation">
         <a href="#premise">Why PRX</a>
@@ -250,7 +251,7 @@
     </main>
 
     <footer class="site-footer">
-      <a class="brand" href="#top" aria-label="Back to top"><span class="wordmark">PR<i>X</i></span><small>MARKETS</small></a>
+      <a class="brand" href="#top" aria-label="Back to top"><span class="logo-pr">PR</span><span class="logo-x" aria-hidden="true"><i></i><b></b></span><small>MARKETS</small></a>
       <p>Markets for measurable recovery.</p>
       <p>© 2026 PRX MARKETS · AMSTERDAM</p>
     </footer>
