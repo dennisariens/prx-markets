@@ -4,15 +4,16 @@
 
 PRX connects capital with verified environmental recovery projects and makes funded outcomes visible through transparent evidence and a public registry.
 
-## v0.1
+## v0.2 prototype
 
-The first product prototype establishes the PRX identity and core marketplace experience:
+The functional product prototype establishes the PRX identity and connects the core marketplace lifecycle:
 
 - Recovery marketplace across plastic, carbon, forests and oceans
-- Global project discovery
-- Verified project cards and measurable supply
-- PRX funding mechanism
-- Public recovery registry concept
+- Searchable and filterable project discovery
+- Shared structured project, supply and verification data
+- Reusable project-detail routes for four recovery types
+- Interactive funding quote and review flow
+- Public recovery registry with inspectable record pages
 - Business recovery portfolio proposition
 - Responsive PRX design system
 
@@ -34,4 +35,4 @@ Then open `http://localhost:3000`.
 
 ## Status
 
-Prototype data is illustrative and must not be represented as live or verified supply until real project/operator integrations are established.
+Prototype data, prices, projects, verification standards and registry records are illustrative. They must not be represented as live or verified supply until real project/operator integrations and methodology review are established.
